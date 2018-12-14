@@ -1,12 +1,18 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'welcome/index'
+  get "sessions/new"
+
+  get "welcome/index"
 
   resources :stories
   resources :users
-  get  '/signup',  to: 'users#new'
-  post '/signup',  to: 'users#create'
+  get  "/signup",  to: "users#new"
+  post "/signup",  to: "users#create"
 
-  root 'welcome#index'
+  get    "/login",   to: "sessions#new"
+  post   "/login",   to: "sessions#create"
+  delete "/logout",  to: "sessions#destroy"
+
+  root "welcome#index"
 end
