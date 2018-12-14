@@ -1,4 +1,4 @@
-<h1 class="is-size-2 has-text-link">Sign up</h1>
+<h1 class="is-size-2 has-text-link has-text-centered">Sign up</h1>
 
 <div class="columns">
   <div class="column is-3 is-offset-3">
@@ -15,8 +15,8 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%# <%= f.label :password_confirmation, "Confirmation" %>
-      <%# <%= f.password_field :password_confirmation %> %> %>
+      <%= f.label :password_confirmation, "Password Confirmation" %>
+      <%= f.password_field :password_confirmation %>
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
