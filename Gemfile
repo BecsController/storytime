@@ -28,6 +28,7 @@ gem 'google-api-client', '~> 0.9'
 gem 'warden'
 gem 'pundit'
 gem 'omniauth-oauth2'
+gem 'bulma-rails', '~> 0.0.4.1'
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
