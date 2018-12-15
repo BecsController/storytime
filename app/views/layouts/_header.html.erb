@@ -8,18 +8,28 @@
       <div class="navbar-item has-dropdown is-hoverable">
     <% if logged_in? %>
           <a href="#" class="navbar-link">
-            Account
+            User Pages
           </a>
         <div class="navbar-dropdown">
           <a><%= link_to "Profile", current_user, class: "navbar-item" %></a>
-          <a><%= link_to "Settings", '#', class: "navbar-item" %></a>
+          <a><%= link_to "Settings", "#", class: "navbar-item" %></a>
           <hr class="navbar-divider">
           <a><%= link_to "Log out", logout_path, method: :delete, class: "navbar-item"  %></a>
         </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a href="#" class="navbar-link">
+          Story Pages
+        </a>
+        <div class="navbar-dropdown">
+          <a><%= link_to "New Story", "#", class: "navbar-item" %></a>
+          <a><%= link_to "Saved Stories", "#", class: "navbar-item" %></a>
+        </div>
+      </div>
     <% else %>
         <a><%= link_to "Log in", login_path, class: "navbar-item" %></a>
-    <% end %>
       </div>
+    <% end %>
     </div>
   </nav>
 </div>
