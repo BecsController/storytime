@@ -1,28 +1,25 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <% if logged_in? %>
-          <li><%= link_to "Users", user_path %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", '#' %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to "Log out", logout_path, method: :delete %>
-              </li>
-            </ul>
-          </li>
-        <% else %>
-          <li><%= link_to "Log in", login_path %></li>
-        <% end %>
-      </ul>
-    </nav>
-  </div>
-</header>
+<div>
+  <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+    <div class="navbar-start">
+      <a><%= link_to "Home", root_path %></a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+    <% if logged_in? %>
+          <a href="#" class="navbar-link">
+            Account
+          </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item"><%= link_to "Profile", current_user %></a>
+          <a class="navbar-item"><%= link_to "Settings", '#' %></a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" ><%= link_to "Log out", logout_path, method: :delete %></a>
+        </div>
+    <% else %>
+        <a class="navbar-item"><%= link_to "Log in", login_path %></a>
+    <% end %>
+      </div>
+    </div>
+  </nav>
+</div>

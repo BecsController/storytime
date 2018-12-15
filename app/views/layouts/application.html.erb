@@ -10,7 +10,11 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <%= yield %>
+    <section class="hero">
+      <div class="hero-body">
+        <%= render 'layouts/header' %>
+        <%= yield %>
+      </div>
+    </section>
   </body>
 </html>
