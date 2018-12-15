@@ -14,3 +14,7 @@
  *= require_self
  */
 @import "bulma";
+
+.bottomLink {
+  margin-top: 2rem;
+}
