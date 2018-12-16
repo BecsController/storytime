@@ -1,9 +1,7 @@
 # frozen_string_literal:true
 
 class UsersController < ApplicationController
-  def index
-
-  end
+  def index; end
 
   def show
     @user = User.find(params[:id])
@@ -17,10 +15,16 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
+      flash[:success] = "Welcome to Storytime!"
       redirect_to @user
     else
+      flash[:danger] = 'Failed to register new user'
       render 'new'
     end
+  end
+
+  def edit
+    @user = User.find(params[:id])
   end
 
   private
