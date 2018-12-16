@@ -1,6 +1,8 @@
+<%= require 'pry'; binding.pry %>
+
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <div class="alert alert-danger">
+    <div class="alert has-text-danger">
       The form contains <%= pluralize(@user.errors.count, "error") %>.
     </div>
     <ul>
