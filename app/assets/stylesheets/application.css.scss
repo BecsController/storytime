@@ -13,7 +13,15 @@
  *= require_tree .
  *= require_self
  */
-@import "bulma";
+ $primary: #BE8AD1;
+ $success: #88B56A;
+ $info: #70B7D8;
+ $warning: #fff176;
+ $danger: #912D2D;
+ $dark: #3F3F3F;
+ $link: #e600e6;
+
+ @import "bulma";
 
 .bottomLink {
   margin-top: 2rem;
@@ -24,13 +32,6 @@
   ul {
     color: red;
     margin: 0 0 30px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
   }
 }
 
